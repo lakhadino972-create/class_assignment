@@ -1,7 +1,12 @@
+"""
+FastAPI app: serves the prediction API and the static frontend.
+Lives in the project root so Vercel can detect it.
 
+Run locally (from project root):
+    python -m uvicorn app:app --reload
+"""
 import json
 from pathlib import Path
-from backend.app import app  
 
 import joblib
 import pandas as pd
@@ -11,7 +16,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent
 MODEL_PATH = ROOT / "model" / "dialysis_model.joblib"
 META_PATH = ROOT / "model" / "metadata.json"
 FRONTEND_DIR = ROOT / "frontend"
