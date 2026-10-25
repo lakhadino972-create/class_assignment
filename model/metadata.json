@@ -1,0 +1,70 @@
+{
+  "model_name": "random_forest",
+  "features": [
+    "Age",
+    "Creatinine_Level",
+    "BUN",
+    "Diabetes",
+    "Hypertension",
+    "GFR",
+    "Urine_Output",
+    "CKD_Status"
+  ],
+  "ranges": {
+    "Age": {
+      "min": 20.0,
+      "max": 90.0,
+      "mean": 54.15928819444444
+    },
+    "Creatinine_Level": {
+      "min": 0.3,
+      "max": 4.13,
+      "mean": 1.3056380208333334
+    },
+    "BUN": {
+      "min": 5.0,
+      "max": 61.9,
+      "mean": 18.813671874999997
+    },
+    "GFR": {
+      "min": 5.0,
+      "max": 120.0,
+      "mean": 68.95386284722223
+    },
+    "Urine_Output": {
+      "min": 100.0,
+      "max": 2899.0,
+      "mean": 1309.189670138889
+    }
+  },
+  "training_rows": 2304,
+  "positive_rate": 0.013454861111111112,
+  "cv_scores": {
+    "logistic_regression": {
+      "cv_average_precision": 0.9777564102564105,
+      "cv_recall": 1.0,
+      "cv_precision": 0.44642857142857145,
+      "cv_f1": 0.6172839506172839
+    },
+    "random_forest": {
+      "cv_average_precision": 0.9984615384615387,
+      "cv_recall": 0.96,
+      "cv_precision": 1.0,
+      "cv_f1": 0.9795918367346939
+    },
+    "gradient_boosting": {
+      "cv_average_precision": 0.90213081801919,
+      "cv_recall": 0.96,
+      "cv_precision": 0.96,
+      "cv_f1": 0.96
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 1.0,
+    "average_precision": 1.0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "test_rows": 461,
+    "test_positive_cases": 6
+  }
+}
